@@ -1,0 +1,42 @@
+[
+    {
+    "icon": "import_export",
+    "title": "Requests",
+    "value": 200,
+    "color": "red",
+    "isIncrease":true,
+    "isCurrency": false,
+    "duration": "4",
+    "percentValue": 34
+    },  
+    {
+        "icon": "check",
+        "title": "Success Response",
+        "value": 159,
+        "color": "purple",
+        "isIncrease":true,
+        "isCurrency": false,
+        "duration": "4",
+        "percentValue": 34
+    },
+    {
+        "icon": "report",
+        "title": "Failed Response",
+        "value": 59,
+        "color": "green",
+        "isIncrease":true,
+        "isCurrency": false,
+        "duration": "4",
+        "percentValue": 34
+    },
+    {
+        "icon": "wifi_tethering",
+        "title": "Server Health",
+        "value": "",
+        "color": "brown",
+        "isIncrease":true,
+        "isCurrency": false,
+        "duration": "4",
+        "percentValue": 34
+        }
+]

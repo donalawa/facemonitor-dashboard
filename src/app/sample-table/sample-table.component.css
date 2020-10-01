@@ -1,0 +1,57 @@
+.full-width-table {
+  width: 100%;
+}
+
+.small-table{
+  overflow-x: scroll !important;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+#filter-box{
+  text-align: right;
+  margin-bottom: 15px
+}
+
+#filter-box input{
+ padding: 10px 5px;
+ width: 40%;
+ min-width: 200px;
+ font-size: 16px;
+ min-width: 300px;
+ border-top: 0px;
+ border-left:0px;
+ border-right: 0px;
+ border-bottom: 2px solid #293ca8;
+ box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.014),
+  0 3px 3px rgba(0, 0, 0, 0.028),
+  0 5px 4px rgba(0, 0, 0, 0.03),
+  0 9px 8px rgba(0, 0, 0, 0.032),
+  0 10px 9px rgba(0, 0, 0, 0.046),
+  0 5px 4px rgba(0, 0, 0, 0.07)
+ ;
+}
+
+#filter-box input:focus{
+  border: 0px;
+  outline: 0px;
+  border-bottom: 2px solid #4157d4;
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 8px 6px rgba(0, 0, 0, 0.06),
+  0 12px 13px rgba(0, 0, 0, 0.072),
+  0 19px 18px rgba(0, 0, 0, 0.086),
+  0 5px 4px rgba(0, 0, 0, 0.12)
+ ;
+}
+
+th{
+  font-size: 16px;
+  background-color:#4157d4;
+  color: white;
+}

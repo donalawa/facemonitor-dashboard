@@ -1,0 +1,40 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 230px;
+}
+
+mat-sidenav {
+  background-color:#293ca8;
+  border-right:0px
+}
+
+mat-nav-list a{
+  color: white
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-h1{
+  margin-bottom: 0 !important;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.mat-sort-header-stem,.mat-sort-header-pointer-left,.mat-sort-header-pointer-right{
+  color:white;
+  background: white !important;
+}
+
+#header{
+  width: 100%;
+  text-align: right;
+}

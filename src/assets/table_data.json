@@ -1,0 +1,50 @@
+[
+    {
+      "ip": 67318711,
+      "endpoint": 0,
+      "method": 0,
+      "response_status": 0,
+      "duration": 2,
+      "timestamp": "Tue Mar 31 1987 01:37:20 GMT+0100 (West Africa Standard Time)"
+    },
+    {
+      "ip": 130461015,
+      "endpoint": 1,
+      "method": 1,
+      "response_status": 0,
+      "duration": 5,
+      "timestamp": "Sun Mar 16 2008 13:21:08 GMT+0100 (West Africa Standard Time)"
+    },
+    {
+      "ip": 124147267,
+      "endpoint": 1,
+      "method": 1,
+      "response_status": 4,
+      "duration": 5,
+      "timestamp": "Sat Jan 05 1974 18:06:12 GMT+0100 (West Africa Standard Time)"
+    },
+    {
+      "ip": 86461547,
+      "endpoint": 1,
+      "method": 1,
+      "response_status": 4,
+      "duration": 5,
+      "timestamp": "Fri Apr 27 2007 08:13:36 GMT+0100 (West Africa Standard Time)"
+    },
+    {
+      "ip": 196146712,
+      "endpoint": 0,
+      "method": 1,
+      "response_status": 0,
+      "duration": 2,
+      "timestamp": "Thu Jan 14 1971 23:07:29 GMT+0100 (West Africa Standard Time)"
+    },
+    {
+      "ip": 82957974,
+      "endpoint": 0,
+      "method": 0,
+      "response_status": 0,
+      "duration": 2,
+      "timestamp": "Thu Sep 17 2020 07:42:23 GMT+0100 (West Africa Standard Time)"
+    }
+  ]
