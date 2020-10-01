@@ -20,20 +20,37 @@ export class SampleTableComponent implements AfterViewInit, OnInit {
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
   displayedColumns = [
-    "clienUserName",
+    // clienUserName: string
+    
+    // fullDate: string
+    // reqMethd: string
+    // resPonseObject: any
+    // resStatus: number
+    // resTime: string
+    // time: string
+    // url: string
     "clientIp",
-    "fullDate",
     "reqMethd",
-    "resPonseObject",
+    "url",
     "resStatus",
-    "resTime",
-    "time",
-    "url"
+    "resPonseObject",
+    "reqtime",
+    "restime",
+    "fullDate",
    ];
 
   ngOnInit() {
-    this.dataSource = new SampleTableDataSource(this.tableService);
+    // setInterval(()=>{
+      this.dataSource = new SampleTableDataSource(this.tableService);
 
+    // },1000)  
+  }
+
+  refresh(){
+    this.tableService.getRealtimeData().subscribe({
+      next: (res:Table[]) => { this.dataSource.data = res; console.log("****  refreshed  ******") },
+      error: res =>{ console.log('*************** An Error Occured *****************')},    
+    })
   }
 
   ngAfterViewInit() {
@@ -45,5 +62,7 @@ export class SampleTableComponent implements AfterViewInit, OnInit {
     // this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
-  constructor(private tableService:TableService){}
+  constructor(private tableService:TableService){
+    
+  }
 }

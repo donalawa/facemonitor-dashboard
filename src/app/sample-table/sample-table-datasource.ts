@@ -31,11 +31,11 @@ export class SampleTableDataSource extends DataSource<Table> {
 
   constructor(private tableService:TableService) {
     super();
-
-    this.tableService.getMonitorData().subscribe({
-      next: data => {this.data = data;},
-      error: error => console.log("An error occured in getting all the data"),
-    })
+    
+    // this.tableService.getMonitorData().subscribe({
+    //   next: data => {this.data = data;},
+    //   error: error => console.log("An error occured in getting all the data"),
+    // })
 
     // console.log(this.tableService.getRealtimeData())
     this.tableService.getRealtimeData().subscribe({
@@ -91,8 +91,8 @@ export class SampleTableDataSource extends DataSource<Table> {
     return data.sort((a, b) => {
       const isAsc = this.sort.direction === 'asc';
       switch (this.sort.active) {
-        case 'url': return compare(a.url, b.url, isAsc);
-        case 'method': return compare(+a.reqMethd, +b.reqMethd, isAsc);
+        // case 'url': return compare(a.url, b.url, isAsc);
+        // case 'method': return compare(+a.reqMethd, +b.reqMethd, isAsc);
         default: return 0;
       }
     });

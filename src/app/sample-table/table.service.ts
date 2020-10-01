@@ -22,7 +22,6 @@ export class TableService {
   }
 
   getRealtimeData(){
-    
     return this.fireStore.collection('FaceApiMonitor').valueChanges()
     // return db.ref
   }
