@@ -20,12 +20,16 @@ export class SampleTableComponent implements AfterViewInit, OnInit {
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
   displayedColumns = [
-    "ip",
-    "endpoint",
-    "method",
-    "response_status",
-    "duration",
-    "timestamp" ];
+    "clienUserName",
+    "clientIp",
+    "fullDate",
+    "reqMethd",
+    "resPonseObject",
+    "resStatus",
+    "resTime",
+    "time",
+    "url"
+   ];
 
   ngOnInit() {
     this.dataSource = new SampleTableDataSource(this.tableService);

@@ -1,4 +1,4 @@
-export interface Table {
+export interface DataStruct {
     clienUserName: string
     clientIp: string
     fullDate: string
@@ -8,4 +8,5 @@ export interface Table {
     resTime: string
     time: string
     url: string
+    
 }
