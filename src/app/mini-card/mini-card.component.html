@@ -9,6 +9,9 @@
         </div>
     </mat-card-header>
     <h3 class="title-text">{{title}}</h3>
+    <div *ngIf="serverRunning && (title == 'Server Health') ">
+        <h3 class="green-text" style="text-align: center;"> Server Healthy... </h3>
+    </div>
     <!-- <p class="difference-text">
         <span
             [ngClass]="{ 'green-text': isIncrease, 'red-text': !isIncrease }">{{ isIncrease ? '+' : '-' }}{{ percentValue | percent:'2.1-2' }}
