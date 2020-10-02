@@ -15,17 +15,21 @@ import { AngularFirestore} from '@angular/fire/firestore'
 export class TableService {
   private tableUrl = 'assets/table_data.json';
 
-  constructor(private http: HttpClient,private db: AngularFireDatabase,private fireStore:AngularFirestore) { }
+  constructor(private afs: AngularFirestore) { }
 
-  getMonitorData(): Observable<any[]>{
-    return this.http.get<any[]>(this.tableUrl).pipe(catchError(this.handleError));
-  }
+  // getMonitorData(): Observable<any[]>{
+  //   return this.http.get<any[]>(this.tableUrl).pipe(catchError(this.handleError));
+  // }
 
   getRealtimeData(){
-    return this.fireStore.collection('FaceApiMonitor').valueChanges()
+    return this.afs.collection('FaceApiMonitor').valueChanges()
     // return db.ref
   }
+
+  getTableData() {
+    return this.afs.collection('FaceApiMonitor', ref => ref.orderBy('fullDate','desc')).valueChanges();
+  }
   private handleError(err: HttpErrorResponse){
-    return throwError(`An error occurred: ${err}`);
+    return throwError(`An error occurred: ${err}`); 
   }
 }

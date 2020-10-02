@@ -2,22 +2,24 @@ import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
-import { SampleTableDataSource } from './sample-table-datasource';
 import { TableService } from './table.service'
 import { Table } from './table'
+import { AngularFirestore} from '@angular/fire/firestore'
+import { DataSource } from '@angular/cdk/collections';
+import {MatTableDataSource} from '@angular/material/table';
 
 @Component({
   selector: 'app-sample-table',
   templateUrl: './sample-table.component.html',
   styleUrls: ['./sample-table.component.css']
 })
-export class SampleTableComponent implements AfterViewInit, OnInit {
+export class SampleTableComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatTable) table: MatTable<Table>;
-  dataSource: SampleTableDataSource;
+  // dataSource: SampleTableDataSource;
   dataLength: number;
-
+  searchKey: string
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
   displayedColumns = [
     // clienUserName: string
@@ -38,31 +40,28 @@ export class SampleTableComponent implements AfterViewInit, OnInit {
     "restime",
     "fullDate",
    ];
+   dataSource: MatTableDataSource<any>;
 
+   length;
+ 
   ngOnInit() {
-    // setInterval(()=>{
-      this.dataSource = new SampleTableDataSource(this.tableService);
-
-    // },1000)  
-  }
-
-  refresh(){
-    this.tableService.getRealtimeData().subscribe({
-      next: (res:Table[]) => { this.dataSource.data = res; console.log("****  refreshed  ******") },
-      error: res =>{ console.log('*************** An Error Occured *****************')},    
+    this.tableService.getTableData().subscribe(data => {
+      // data = data.sort()
+      this.dataSource = new MatTableDataSource(data);
+      this.dataSource.sort = this.sort;
+      this.dataSource.paginator = this.paginator;
     })
   }
 
-  ngAfterViewInit() {
-    this.dataSource.sort = this.sort;
-    this.dataSource.paginator = this.paginator;
-    this.table.dataSource = this.dataSource;
-  }
-  applyFilter(filterValue: string) {
-    // this.dataSource.filter = filterValue.trim().toLowerCase();
+ 
+ 
+
+  applyFilter() {
+    this.dataSource.filter = this.searchKey.trim().toLowerCase();
   }
 
-  constructor(private tableService:TableService){
+  constructor(private tableService:TableService, private afs: AngularFirestore ){
     
   }
 }
+

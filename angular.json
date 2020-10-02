@@ -123,5 +123,8 @@
       }
     }
   },
-  "defaultProject": "faceApi-Monitor"
+  "defaultProject": "faceApi-Monitor",
+  "cli": {
+    "analytics": false
+  }
 }

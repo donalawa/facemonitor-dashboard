@@ -32,6 +32,7 @@ import { TableComponent } from './table/table/table.component';
 import { MatChipsModule } from '@angular/material/chips';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
+import { FormsModule } from '@angular/forms'
 import { MiniCardComponent } from './mini-card/mini-card.component'
 // import { NgMatIconsModule } from 'ng-mat-icons';
 @NgModule({
@@ -72,7 +73,8 @@ import { MiniCardComponent } from './mini-card/mini-card.component'
     HttpClientModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    FormsModule
   ],
   providers: [HttpClientModule,HttpClient],
   bootstrap: [AppComponent]
